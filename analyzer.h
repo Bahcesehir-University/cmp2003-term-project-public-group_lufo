@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
 #include <vector>
+#include <unordered_map>
+
 
 struct ZoneCount {
     std::string zone;
@@ -19,8 +21,13 @@ public:
     void ingestFile(const std::string& csvPath);
 
     // Top K zones: count desc, zone asc
-    std::vector<ZoneCount> topZones(int k = 10) const;
+    std::vector<ZoneCount> topZones(int k = 1000) const;
 
     // Top K slots: count desc, zone asc, hour asc
     std::vector<SlotCount> topBusySlots(int k = 10) const;
+private:
+    //Zone Count 
+    std::unordered_map<std::string, long long> zoneCounts;
+    std::unordered_map<std::string, std::unordered_map<int, long long>> slotCounts;
+
 };

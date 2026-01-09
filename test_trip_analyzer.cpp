@@ -53,7 +53,7 @@ TEST_CASE("A2", "[A2]") {
         "5,ZONE_B,ZONE_Y,NOT_A_DATE,2.0,12.5",
         // valid
         "6,ZONE_B,ZONE_Y,2024-01-01 23:59,2.0,12.5"
-        });
+    });
 
     TripAnalyzer ta;
     ta.ingestFile(path);
@@ -79,7 +79,7 @@ TEST_CASE("A3", "[A3]") {
         "1,ZONE_A,ZX,2024-01-01 00:00,1,1",
         "2,ZONE_A,ZX,2024-01-01 23:59,1,1",
         "3,ZONE_A,ZX,2024-01-01 23:00,1,1"
-        });
+    });
 
     TripAnalyzer ta;
     ta.ingestFile(path);
@@ -103,7 +103,7 @@ TEST_CASE("B1", "[B1]") {
         "3,ZONE_B,ZX,2024-01-01 10:30,1,1",
         "4,ZONE_A,ZZ,2024-01-01 12:00,1,1",
         "5,ZONE_C,ZX,2024-01-01 10:00,1,1"
-        });
+    });
 
     TripAnalyzer ta;
     ta.ingestFile(path);
@@ -127,7 +127,7 @@ TEST_CASE("B2", "[B2]") {
         "3,ZONE_B,ZX,2024-01-01 11:00,1,1",
         "4,ZONE_A,ZX,2024-01-01 11:00,1,1",
         "5,ZONE_C,ZX,2024-01-01 10:00,1,1"
-        });
+    });
 
     TripAnalyzer ta;
     ta.ingestFile(path);
@@ -153,7 +153,7 @@ TEST_CASE("B3", "[B3]") {
         "1,ZONE01,ZX,2024-01-01 10:00,1,1",
         "2,zone01,ZX,2024-01-01 10:00,1,1",
         "3,ZONE01,ZX,2024-01-01 10:00,1,1"
-        });
+    });
 
     TripAnalyzer ta;
     ta.ingestFile(path);
